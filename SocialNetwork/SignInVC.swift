@@ -10,11 +10,13 @@ import UIKit
 
 class SignInVC: UIViewController {
 
+    @IBOutlet weak var snoopDogImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
-    
+        snoopDogImage.layer.cornerRadius = 5
+
     }
 
 
