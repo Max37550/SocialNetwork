@@ -10,6 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
+import SwiftKeychainWrapper
 
 class SignInVC: UIViewController {
     
@@ -19,6 +20,13 @@ class SignInVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        //auto sign in
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
+            performSegue(withIdentifier: "goToFeed", sender: nil)
+        }
     }
 
     @IBAction func facebookBtnPressed(_ sender: Any) {
@@ -43,12 +51,15 @@ class SignInVC: UIViewController {
     
     func firebaseAuth(_ credential: FIRAuthCredential) {
         
-        FIRAuth.auth()?.signIn(with: credential, completion: { (result, error) in
+        FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
             
             if error != nil {
                 print("MAX : Unable to authenticate with Firebase - \(error)")
             } else {
                 print("MAX : Succesfully authenticated with Firebase")
+                if let user = user {
+                    self.completeSignIn(id: user.uid)
+                }
             }
         })
     }
@@ -61,6 +72,9 @@ class SignInVC: UIViewController {
                 //User already exists
                 if error == nil {
                     print("MAX : User authenticated with Firebase")
+                    if let user = user {
+                        self.completeSignIn(id: user.uid)
+                    }
                 } else {
                     //Otherwise, create a new user
                     FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
@@ -68,11 +82,21 @@ class SignInVC: UIViewController {
                             print("MAX : Unable to authenticate with Firebase using email")
                         } else {
                             print("MAX : Successfully authenticated with Firebase")
+                            if let user = user {
+                                self.completeSignIn(id: user.uid)
+                            }
                         }
                     })
                 }
             })
         }
+    }
+    
+    func completeSignIn(id: String){
+        
+        let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
+        print("MAX : Data saved to keychain \(keychainResult)")
+        performSegue(withIdentifier: "goToFeed", sender: nil)
     }
     
 }
