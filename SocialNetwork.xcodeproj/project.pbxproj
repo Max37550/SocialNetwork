@@ -21,6 +21,7 @@
 		9C2A7C6F1E86F09000826244 /* FancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2A7C6E1E86F08F00826244 /* FancyButton.swift */; };
 		9CA8C8471E893F0500CFD0EC /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA8C8461E893F0500CFD0EC /* FeedVC.swift */; };
 		9CA8C8491E89513400CFD0EC /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA8C8481E89513400CFD0EC /* CircleImageView.swift */; };
+		9CBB7E691E897C8E00D8D538 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBB7E681E897C8E00D8D538 /* PostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		9C2A7C6E1E86F08F00826244 /* FancyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyButton.swift; sourceTree = "<group>"; };
 		9CA8C8461E893F0500CFD0EC /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		9CA8C8481E89513400CFD0EC /* CircleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
+		9CBB7E681E897C8E00D8D538 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		E4D58FAE9E56132B9A7E18A1 /* Pods-SocialNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetwork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialNetwork/Pods-SocialNetwork.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +125,7 @@
 				9C2A7C6C1E86EF6000826244 /* FancyField.swift */,
 				9C2A7C6E1E86F08F00826244 /* FancyButton.swift */,
 				9CA8C8481E89513400CFD0EC /* CircleImageView.swift */,
+				9CBB7E681E897C8E00D8D538 /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				9C2A7C4F1E86DA2B00826244 /* AppDelegate.swift in Sources */,
 				9C2A7C661E86EB9500826244 /* FancyView.swift in Sources */,
 				9C2A7C691E86EC2700826244 /* Constants.swift in Sources */,
+				9CBB7E691E897C8E00D8D538 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
