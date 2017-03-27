@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SignInVC.swift
 //  SocialNetwork
 //
 //  Created by Maxime Peralez on 25/03/2017.
@@ -12,6 +12,9 @@ import FBSDKLoginKit
 import Firebase
 
 class SignInVC: UIViewController {
+    
+    @IBOutlet weak var emailAddressLbl: FancyField!
+    @IBOutlet weak var passwordLbl: FancyField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,5 +53,26 @@ class SignInVC: UIViewController {
         })
     }
 
+    @IBAction func signInBtnPressed(_ sender: Any) {
+        
+        if let email = emailAddressLbl.text , let password = passwordLbl.text {
+            
+            FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
+                //User already exists
+                if error == nil {
+                    print("MAX : User authenticated with Firebase")
+                } else {
+                    //Otherwise, create a new user
+                    FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
+                        if error != nil {
+                            print("MAX : Unable to authenticate with Firebase using email")
+                        } else {
+                            print("MAX : Successfully authenticated with Firebase")
+                        }
+                    })
+                }
+            })
+        }
+    }
+    
 }
-
