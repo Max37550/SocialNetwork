@@ -50,12 +50,14 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if let post = posts[indexPath.row] as? Post {
-            print("MAX : \(post.caption)")
+        let post = posts[indexPath.row]
+        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
+            cell.configureCell(post: post)
+            return cell
+        } else {
+            return PostCell()
         }
-        
-        
-        return tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
     }
 
     @IBAction func signOutBtnPressed(_ sender: Any) {
