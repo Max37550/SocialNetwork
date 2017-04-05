@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -324,6 +324,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="caption" destination="awX-MQ-O8n" id="RjH-2S-jlW"/>
+                                            <outlet property="likeImg" destination="0jW-eO-ifD" id="04F-U3-Onk"/>
                                             <outlet property="likesLbl" destination="GdK-Lp-tUN" id="RYo-lp-Ybn"/>
                                             <outlet property="postImage" destination="kLR-XZ-FWm" id="1Tg-WD-jGe"/>
                                             <outlet property="profileImg" destination="bJc-aO-v61" id="yjc-gw-oC3"/>

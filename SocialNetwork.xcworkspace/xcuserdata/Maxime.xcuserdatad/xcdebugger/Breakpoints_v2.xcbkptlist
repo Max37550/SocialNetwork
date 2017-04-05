@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SocialNetwork/PostCell.swift"
-            timestampString = "512416414.965511"
+            timestampString = "513109997.126796"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "configureCell(post:img:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SocialNetwork/FeedVC.swift"
-            timestampString = "512420562.898984"
+            timestampString = "513110890.294406"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "postBtnPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SocialNetwork/FeedVC.swift"
-            timestampString = "513107417.545391"
+            timestampString = "513110890.294406"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
             landmarkName = "postBtnPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
